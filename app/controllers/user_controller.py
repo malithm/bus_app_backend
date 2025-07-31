@@ -24,6 +24,7 @@ def all():
     return jsonify(users_schema.dump(users))
 
 def show(user_id):
+    print("user_id = ", user_id)
     user = UserModel.query.get(user_id)
     return user_schema.jsonify(user)
 
